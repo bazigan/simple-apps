@@ -16,9 +16,17 @@
      
      <script>
         
-            document.getElementById("test").onclick = function() {
-                document.write(alert("Hello!"))
-            }
+        document.getElementById('test').onclick = function() {
+
+            const coba = confirm('Lanjut?');
+
+        if(coba) {
+            document.write("Oke");
+        } else {
+            document.write("Ga mau!");
+        }
+
+}
     
      </script>
      <button id="test">Click</button>
