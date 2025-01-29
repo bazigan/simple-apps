@@ -15,6 +15,8 @@ app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.get('/app1', (req, res) => {
   res.send('Hello this Apps 1!')
+  var coba = (1+1)
+  coba = 3
 });
 
 app.get('/app2', (req, res) => {
