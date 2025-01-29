@@ -11,11 +11,11 @@ app.use(logger)
 const connection = require('./middleware/db_connect');
 
 // Dashboard
-app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'publi')));
 
 app.get('/app1', (req, res) => {
   
-  res.send(var coba = (1+1) coba = 3)
+  res.send('Hello this App 1!')
 });
 
 app.get('/app2', (req, res) => {
