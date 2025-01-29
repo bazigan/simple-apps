@@ -31,7 +31,7 @@ pipeline {
             steps {
                 sh'''
                 cd app
-                sonar-scanner   -Dsonar.projectKey=simple-amar   -Dsonar.sources=.   -Dsonar.host.url=http://172.23.3.13:9000   -Dsonar.token=sqp_56158b288ee6e9c230bcc25bbdd798e18c765b02
+                sonar-scanner   -Dsonar.projectKey=simple-amar  -Dsonar.host.url=http://172.23.3.13:9000   -Dsonar.token=sqp_56158b288ee6e9c230bcc25bbdd798e18c765b02
                 '''
             }
         }
