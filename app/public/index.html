@@ -15,9 +15,11 @@
      
      
      <script>
-        function coba() {
-            document.getElementById("test").innerHTML = "Hello"
-        }
+        
+            document.getElementById("test").onclick = function() {
+                alert("Hello!")
+            }
+    
      </script>
      <button id="test" onclick="coba">Click</button>
 </body>
