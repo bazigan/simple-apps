@@ -9,7 +9,6 @@ body {
 
 .main {
     align-items: center;
-    padding: 10%;
-    color: crimson;
-    ;
+    color: white;
+    background-color: crimson;
 }
