@@ -15,16 +15,16 @@ const { ClientRequest } = require('http');
 // Dashboard
 app.use('/', express.static(path.join(__dirname, 'public')));
 
-app.get('/app1', (req, res) => {
+app.get('/app1', async (req, res) => {
   
   res.send('Hello this App 1!')
 });
 
-app.get('/app2', (req, res) => {
+app.get('/app2', async (req, res) => {
   res.send('Hello this App 2!')
 });
 
-app.get('/users', (req, res, next) => {
+app.get('/users', async (req, res, next) => {
   const sql = "SELECT * FROM tb_data ORDER BY id desc"
   connection.query(sql,(error, fields) => {
     if (error) {
