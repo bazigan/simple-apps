@@ -6,3 +6,10 @@ body {
 .logo {
     width: 10%;
 }
+
+.main {
+    align-items: center;
+    padding: 10%;
+    color: crimson;
+    ;
+}
