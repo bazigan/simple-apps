@@ -1,6 +1,5 @@
-FROM node:18.20.8-slim
+FROM node:18.20.8-bullseye-slim
 WORKDIR /app
-ADD package.json /app/
 ADD . /app/
-RUN npm install -g
-CMD [ "npm start" ]
+RUN npm install
+CMD [ "npm", "start" ]
