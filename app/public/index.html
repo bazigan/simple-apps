@@ -1,15 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training DevOps</title>
-    <link rel="stylesheet" href="stylesheet/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Saya</title>
+  <style>
+    :root {
+      --biru-tua: #003366;
+      --biru-muda: #3399ff;
+      --putih: #ffffff;
+      --abu: #f0f0f0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--abu);
+      color: #333;
+    }
+
+    header {
+      background-color: var(--biru-tua);
+      color: var(--putih);
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background-color: var(--biru-muda);
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: var(--putih);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: var(--biru-tua);
+      border-bottom: 2px solid var(--biru-muda);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project, .portfolio-item {
+      background: var(--putih);
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid var(--biru-muda);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background-color: var(--biru-tua);
+      color: var(--putih);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .kontak-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .kontak-form input, .kontak-form textarea {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .kontak-form button {
+      background-color: var(--biru-muda);
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .kontak-form button:hover {
+      background-color: #2a7fcc;
+    }
+  </style>
 </head>
 <body>
-    <img class="logo" src="./images/idn-logo.png" alt="idn-logo">
-     <h1>Belajar Devops</h1>
-     <p>Update</p>
+  <header id="home">
+    <h1>Amar</h1>
+    <p>IT Consultant | Junior System Administrator | Cloud Admin</p>
+  </header>
+
+  <nav>
+    <a href="#portfolio">Portofolio</a>
+    <a href="#projects">Project</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="portfolio">
+    <h2>Portofolio Saya</h2>
+    <div class="portfolio-item">
+      <h3>Desain UI Aplikasi Mobile</h3>
+      <p>Membuat prototype dan desain aplikasi untuk kebutuhan edukasi berbasis mobile.</p>
+    </div>
+    <div class="portfolio-item">
+      <h3>Website Toko Online</h3>
+      <p>Mengembangkan website e-commerce dengan fitur keranjang belanja dan pembayaran otomatis.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Project Saya</h2>
+    <div class="project">
+      <h3>Sistem Booking Lapangan</h3>
+      <p>Web app untuk mempermudah penyewaan lapangan olahraga. Dibuat dengan Node.js dan MongoDB.</p>
+    </div>
+    <div class="project">
+      <h3>Dashboard Monitoring Server</h3>
+      <p>Aplikasi real-time monitoring status server dengan grafik dan alerting.</p>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak Saya</h2>
+    <form class="kontak-form" onsubmit="kirimPesan(event)">
+      <input type="text" id="nama" placeholder="Nama Anda" required />
+      <input type="email" id="email" placeholder="Email Anda" required />
+      <textarea id="pesan" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Nama Anda. Semua hak dilindungi.
+  </footer>
+
+  <script>
+    function kirimPesan(event) {
+      event.preventDefault();
+      const nama = document.getElementById("nama").value;
+      const email = document.getElementById("email").value;
+      const pesan = document.getElementById("pesan").value;
+      alert(\`Terima kasih, \${nama}! Pesan Anda telah dikirim.\`);
+      // Reset form
+      event.target.reset();
+    }
+  </script>
 </body>
 </html>
