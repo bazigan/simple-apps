@@ -14,7 +14,7 @@
 
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-color: var(--abu);
       color: #333;
     }
@@ -67,10 +67,17 @@
 
     .project, .portfolio-item {
       background: var(--putih);
-      padding: 1rem;
-      margin-bottom: 1rem;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
       border-left: 5px solid var(--biru-muda);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project:hover, .portfolio-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
 
     footer {
@@ -109,7 +116,7 @@
 <body>
   <header id="home">
     <h1>Amar</h1>
-    <p>IT Consultant | Junior System Administrator | Cloud Admin</p>
+    <p>Junior System Admin | IT Consultant | Cloud Admin</p>
   </header>
 
   <nav>
@@ -162,8 +169,7 @@
       const nama = document.getElementById("nama").value;
       const email = document.getElementById("email").value;
       const pesan = document.getElementById("pesan").value;
-      alert(\'Terima kasih, \${nama}! Pesan Anda telah dikirim.\'');
-      // Reset form
+      alert(\`Terima kasih, \${nama}! Pesan Anda telah dikirim.\`);
       event.target.reset();
     }
   </script>
