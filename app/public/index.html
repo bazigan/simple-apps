@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio Saya</title>
+  <title>Portfolio Saya - System Administrator</title>
+  <!-- Import Font Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --dark-blue: #0a192f;
       --white: #ffffff;
       --hover-shadow: rgba(255, 255, 255, 0.1);
+      --accent: #64ffda;
     }
 
     * {
@@ -18,7 +22,7 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: var(--dark-blue);
       color: var(--white);
       scroll-behavior: smooth;
@@ -40,7 +44,8 @@
     }
 
     .logo {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+      font-weight: 600;
     }
 
     .nav-links {
@@ -52,11 +57,12 @@
     .nav-links li a {
       color: var(--white);
       text-decoration: none;
+      font-weight: 500;
       transition: color 0.3s;
     }
 
     .nav-links li a:hover {
-      color: #64ffda;
+      color: var(--accent);
     }
 
     main {
@@ -65,6 +71,7 @@
 
     .section {
       padding: 80px 40px;
+      text-align: center; /* Center text */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -76,8 +83,39 @@
     }
 
     #hero {
-      text-align: center;
       padding-top: 100px;
+    }
+
+    #hero h2 {
+      font-size: 2.5rem;
+    }
+
+    #hero p {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-top: 10px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    section p, section ul {
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    section ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    section ul li::before {
+      content: "• ";
+      color: var(--accent);
     }
 
     footer {
@@ -114,29 +152,34 @@
 
   <main>
     <section id="hero" class="section">
-      <h2>Halo, saya [Namamu]</h2>
-      <p>Web Developer | UI/UX Designer</p>
+      <h2>Halo, saya Amar</h2>
+      <p>System Administrator</p>
     </section>
 
     <section id="about" class="section">
       <h2>Tentang Saya</h2>
-      <p>Saya seorang pengembang web yang suka membuat desain bersih dan responsif. Saya memiliki pengalaman dalam HTML, CSS, JavaScript, dan framework modern.</p>
+      <p>Saya adalah seorang System Administrator dengan keahlian dalam mengelola infrastruktur TI, jaringan server, dan keamanan sistem. Saya terbiasa bekerja dengan Linux, Windows Server, virtualisasi, dan otomatisasi menggunakan tools seperti Ansible dan Bash scripting.</p>
     </section>
 
     <section id="projects" class="section">
       <h2>Proyek</h2>
-      <p>Berikut beberapa proyek yang pernah saya kerjakan: website portofolio, landing page produk, dan dashboard admin interaktif.</p>
+      <p>Beberapa proyek yang saya kerjakan meliputi:</p>
+      <ul>
+        <li>Implementasi server monitoring dengan Zabbix</li>
+        <li>Otomatisasi deployment aplikasi menggunakan Ansible</li>
+        <li>Setup dan manajemen infrastruktur cloud (AWS dan Proxmox)</li>
+      </ul>
     </section>
 
     <section id="contact" class="section">
       <h2>Kontak</h2>
-      <p>Email: kamu@email.com</p>
-      <p>LinkedIn: linkedin.com/in/namamu</p>
+      <p>Email: amar@idn.id</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/bazigan" target="_blank" style="color: var(--accent); text-decoration: none;">linkedin.com/in/namamu</a></p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Portfolio oleh [Namamu].</p>
+    <p>&copy; 2025 Portfolio oleh [Amar].</p>
   </footer>
 </body>
 </html>
