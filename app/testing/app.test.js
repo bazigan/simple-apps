@@ -4,10 +4,11 @@ require('dotenv').config();
 const connection = require('../middleware/db_connect');
 const app = require('../app');
 
+const util = require('util');
+
 beforeAll(async () => {
   // Pastikan DB connect sebelum test jalan
-  await connection.connect();
-  app.set('connection', connection);
+ app.set('connection', connection);
 });
 
 afterAll(async () => {
