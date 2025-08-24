@@ -8,7 +8,7 @@ const util = require('util');
 
 beforeAll(async () => {
   // Pastikan DB connect sebelum test jalan
- app.set('connection', connection);
+ connection.query = util.promisify(connection.query);
 });
 
 afterAll(async () => {
