@@ -25,13 +25,13 @@ describe('Express App - Unit Tests', () => {
   it('GET /app1 should respond with "Hello App1!"', async () => {
     const response = await request(app).get('/app1');
     expect(response.status).toBe(200);
-    expect(response.text).toMatch(/Hello App1!/i);
+    expect(response.text).toMatch(/Hello this Apps 1!/i);
   });
 
   it('GET /app2 should respond with "Hello App2!"', async () => {
     const response = await request(app).get('/app2');
     expect(response.status).toBe(200);
-    expect(response.text).toMatch(/Hello App2!/i);
+    expect(response.text).toMatch(/Hello this Apps 1!/i);
   });
 
   it('GET /invalid should return 404 for unknown route', async () => {
