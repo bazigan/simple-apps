@@ -49,12 +49,12 @@ describe('Express App - Integration Tests (Database)', () => {
   });
 
   it('DB query should return at least 1 record from users table', async () => {
-    const [rows] = await connection.query('SELECT * FROM users LIMIT 1');
+    const rows = await connection.query('SELECT * FROM users LIMIT 1');
     expect(rows.length).toBeGreaterThan(0);
   });
 
   it('DB should reject invalid SQL query', async () => {
     await expect(connection.query('SELECT * FROM non_existing_table'))
-      .rejects.toThrow();
+    .rejects.toThrow();
   });
 });
