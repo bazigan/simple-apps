@@ -48,6 +48,20 @@ describe('Express App - Integration Tests (Database)', () => {
     expect(Array.isArray(response.body)).toBe(true);
   });
 
+  it('GET /users with broken query should return 500', async () => {
+    // sementara timpa method query biar simulate error
+    const originalQuery = connection.query;
+    connection.query = jest.fn((sql, cb) => cb(new Error('Simulated DB error')));
+
+    const response = await request(app).get('/users');
+    expect(response.status).toBe(500); // pastikan kamu set status 500 di app.js
+    expect(response.body).toHaveProperty('error');
+
+    // balikin lagi query ke aslinya biar test lain nggak error
+    connection.query = originalQuery;
+  });
+
+
   it('DB query should return at least 1 record from users table', async () => {
     const rows = await connection.query('SELECT * FROM tb_data LIMIT 1');
     expect(rows.length).toBeGreaterThan(0);
