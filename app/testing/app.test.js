@@ -49,18 +49,17 @@ describe('Express App - Integration Tests (Database)', () => {
   });
 
   it('GET /users with broken query should return 500', async () => {
-    // sementara timpa method query biar simulate error
+    // Simulate error dengan Promise reject
     const originalQuery = connection.query;
-    connection.query = jest.fn((sql, cb) => cb(new Error('Simulated DB error')));
+    connection.query = jest.fn().mockRejectedValue(new Error('Simulated DB error'));
 
     const response = await request(app).get('/users');
-    expect(response.status).toBe(500); // pastikan kamu set status 500 di app.js
-    expect(response.body).toHaveProperty('error');
+    expect(response.status).toBe(500);
+    expect(response.body).toHaveProperty('message', 'Database error');
 
-    // balikin lagi query ke aslinya biar test lain nggak error
+    // balikin lagi
     connection.query = originalQuery;
   });
-
 
   it('DB query should return at least 1 record from users table', async () => {
     const rows = await connection.query('SELECT * FROM tb_data LIMIT 1');
