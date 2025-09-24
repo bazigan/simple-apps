@@ -4,12 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training DevOps</title>
+    <title>Kamis Tech - Solusi Penjadwalan Perusahaan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet/style.css">
 </head>
 <body>
-    <img class="logo" src="./images/idn-logo.png" alt="idn-logo">
-     <h1>Belajar Devops</h1>
-     <h2>Set Update</h2>
+    <header class="main-header">
+        <div class="container nav-container">
+            <div class="logo-area">
+                <img class="logo" src="./images/idn-logo.png" alt="Kamis Tech logo">
+                <span class="company-name">Kamis Tech</span>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#services">Jasa</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                    <li><a href="#contact">Kontak Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Solusi Penjadwalan Modern untuk Perusahaan Anda</h1>
+                <p>Kamis Tech menyediakan layanan teknologi untuk manajemen meeting, karyawan, dan kebutuhan penjadwalan lainnya secara efisien dan terintegrasi.</p>
+                <a href="#contact" class="btn primary-btn">Hubungi Kami</a>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Jasa Kami</h2>
+                <div class="services-list">
+                    <div class="service-card">
+                        <h3>Manajemen Meeting</h3>
+                        <p>Atur jadwal meeting dengan mudah, integrasi kalender, dan notifikasi otomatis.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Manajemen Karyawan</h3>
+                        <p>Pencatatan kehadiran, pengelolaan shift, dan monitoring kinerja karyawan.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Penjadwalan Otomatis</h3>
+                        <p>Optimasi penjadwalan tugas dan sumber daya dengan sistem cerdas.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Kustomisasi Sistem</h3>
+                        <p>Solusi penjadwalan yang dapat disesuaikan dengan kebutuhan bisnis Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2>Testimoni Klien</h2>
+                <div class="testimonials-list">
+                    <div class="testimonial-card">
+                        <p>"Sistem Kamis Tech sangat membantu dalam mengatur jadwal meeting dan shift karyawan kami!"</p>
+                        <span>- PT Sukses Selalu</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Integrasi kalender dan notifikasi otomatisnya sangat memudahkan pekerjaan HR kami."</p>
+                        <span>- CV Maju Jaya</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Kontak Kami</h2>
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Nama Anda" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Pesan" required></textarea>
+                    <button type="submit" class="btn">Kirim Pesan</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <span>&copy; 2025 Kamis Tech. All rights reserved.</span>
+        </div>
+    </footer>
 </body>
 </html>
