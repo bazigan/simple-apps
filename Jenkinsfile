@@ -12,6 +12,7 @@ pipeline {
             steps {
                 sh'''
                 cd app
+                cp README.md test.md
                 npm install
                 '''
             }
