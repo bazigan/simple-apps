@@ -54,5 +54,11 @@ pipeline {
                  sh 'docker compose push' 
             }
         }
+
+        stage('Notification') {
+            steps {
+                emailext body: 'Mantab', subject: 'Sukses Deploy', to: 'amar@idn.id'
+            }
+        }
     }
 }
