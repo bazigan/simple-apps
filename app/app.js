@@ -21,7 +21,7 @@ app.get('/app2', (req, res) => {
   res.send('Hello this Apps 2!')
 });
 
-app.get('/app2', (req, res) => {
+app.get('/app3', (req, res) => {
   res.send('Hello this Apps 3!')
 });
 
