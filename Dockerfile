@@ -1,5 +1,5 @@
 # Use multi-stage builds to optimize the final image size
-FROM node:18-alpine as build
+FROM node:18-alpine AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
