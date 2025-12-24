@@ -1,0 +1,14 @@
+name: simple
+
+services:
+  app:
+    image: bazigan/simple-app
+    build: .
+    ports:
+      - "5000:3000"
+    restart: always
+    volumes:
+      - vol-app:/app/public/images
+
+volumes:
+  vol-app:
