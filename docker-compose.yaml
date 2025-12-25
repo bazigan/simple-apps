@@ -2,7 +2,7 @@ name: simple
 
 services:
   app:
-    image: bazigan/simple-app:1.0
+    image: bazigan/simple-app:1.1
     build: .
     ports:
       - "5000:3000"
