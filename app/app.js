@@ -13,9 +13,7 @@ const connection = require('./middleware/db_connect');
 // Dashboard
 app.use('/', express.static(path.join(__dirname, 'public')));
 
-app.get('/app1', (req, res) => {
-  res.send('Hello this Apps 1!')
-});
+app.use('/app1', express.static(path.join(__dirname, 'app1')));
 
 app.get('/app2', (req, res) => {
   res.send('Hello this Apps 2!')
