@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon app",
     "start": "node app",
-    "test": "jest --forceExit testing/",
+    "test": "jest --forceExit --testEnvironment=app/.env testing/",
     "test:coverage": "jest --coverage --forceExit testing/"
   },
   "author": "Moch Rafi Riadi",
